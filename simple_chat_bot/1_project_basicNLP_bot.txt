@@ -1,0 +1,33 @@
+pip install SpeechRecognition pyttsx3 pyaudio
+import pyttsx3
+
+# Initialize the text-to-speech engine
+engine = pyttsx3.init()
+
+def speak(text):
+    """Make the assistant speak."""
+    engine.say(text)
+    engine.runAndWait()
+
+def main():
+    # Welcome message
+    speak("Hello! I am your simple bot from Mallareddy College.")
+    speak("You can say hello, ask my name, or say goodbye.")
+
+    while True:
+        # Get user input
+        command = input("You: ").lower()
+        
+        # Respond to commands
+        if "hello" in command:
+            speak("Hi there! Welcome to Mallareddy College.")
+        elif "what's your name" in command or "what is your name" in command:
+            speak("My name is Simple Bot from Mallareddy College.")
+        elif "goodbye" in command:
+            speak("Goodbye! Have a great day at Mallareddy College.")
+            break
+        else:
+            speak("I didn't understand that. Please try again.")
+
+if __name__ == "__main__":
+    main()

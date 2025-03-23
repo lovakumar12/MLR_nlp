@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bot - Mallareddy College</title>
+</head>
+<body>
+    <h1>Welcome to Mallareddy College Bot</h1>
+    <form method="post">
+        <label for="user_input">Enter your command:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if bot_response %}
+        <h2>Bot Response:</h2>
+        <p>{{ bot_response }}</p>
+    {% endif %}
+</body>
+</html>
